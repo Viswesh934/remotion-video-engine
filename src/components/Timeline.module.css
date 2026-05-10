@@ -1,0 +1,170 @@
+/**
+ * Timeline Component Styles
+ */
+
+.timeline {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+/* Horizontal orientation */
+.timeline.horizontal .container {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.timeline.horizontal .line {
+	position: relative;
+	margin: 40px 0;
+}
+
+.timeline.horizontal .events {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/* Vertical orientation */
+.timeline.vertical .container {
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.timeline.vertical .line {
+	position: relative;
+	margin: 0 40px;
+}
+
+.timeline.vertical .events {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/* Timeline line */
+.line {
+	position: relative;
+	overflow: hidden;
+	border-radius: 2px;
+}
+
+.progressLine {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 2px;
+}
+
+/* Events container */
+.events {
+	position: relative;
+}
+
+/* Individual event */
+.event {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	transition: opacity 0.3s ease;
+}
+
+/* Horizontal event positioning */
+.timeline.horizontal .event {
+	flex-direction: column;
+	transform: translateX(-50%);
+	top: 50%;
+}
+
+.timeline.horizontal .event .eventContent {
+	text-align: center;
+	margin-top: 8px;
+}
+
+/* Vertical event positioning */
+.timeline.vertical .event {
+	flex-direction: row;
+	transform: translateY(-50%);
+	left: 50%;
+}
+
+.timeline.vertical .event .eventContent {
+	text-align: left;
+	margin-left: 8px;
+}
+
+/* Event marker */
+.marker {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+
+.markerDot {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border: 3px solid;
+	background-color: currentColor;
+	box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.markerIcon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Event content */
+.eventContent {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	max-width: 200px;
+}
+
+.eventLabel {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.eventDescription {
+	font-size: 12px;
+	line-height: 1.4;
+	opacity: 0.8;
+}
+
+.eventDate {
+	font-size: 11px;
+	line-height: 1.4;
+	opacity: 0.6;
+	font-style: italic;
+}
+
+/* Active state */
+.event.active .markerDot {
+	box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2),
+	            0 0 12px currentColor;
+}
+
+.event.active .eventLabel {
+	font-weight: 700;
+}

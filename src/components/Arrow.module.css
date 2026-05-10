@@ -1,0 +1,12 @@
+/**
+ * Arrow Component Styles
+ */
+
+.arrow {
+	position: relative;
+	display: inline-block;
+}
+
+.arrow svg {
+	display: block;
+}

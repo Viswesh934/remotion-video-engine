@@ -1,0 +1,17 @@
+/**
+ * Grid Component Styles
+ * 
+ * Base styles for the grid layout component
+ */
+
+.grid {
+	box-sizing: border-box;
+	display: grid;
+}
+
+/* Ensure grid items are properly sized */
+.grid > * {
+	box-sizing: border-box;
+	min-width: 0;
+	min-height: 0;
+}

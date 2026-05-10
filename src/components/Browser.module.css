@@ -1,0 +1,188 @@
+/**
+ * Browser Component Styles
+ * 
+ * Styles for simulated browser window with chrome, address bar, and content area
+ */
+
+/* Main browser container */
+.browser {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	font-family: var(--font-family);
+	border: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));
+}
+
+/* Chrome header (top bar) */
+.chromeHeader {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px 12px;
+	min-height: 40px;
+	flex-shrink: 0;
+}
+
+/* Window control buttons (red, yellow, green dots) */
+.windowControls {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.controlButton {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	display: block;
+}
+
+.controlButton[data-color="red"] {
+	background-color: #ff5f56;
+}
+
+.controlButton[data-color="yellow"] {
+	background-color: #ffbd2e;
+}
+
+.controlButton[data-color="green"] {
+	background-color: #27c93f;
+}
+
+/* Navigation buttons */
+.navigationButtons {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+}
+
+.navButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	border: none;
+	border-radius: 4px;
+	background-color: transparent;
+	color: var(--color-foreground);
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	padding: 0;
+}
+
+.navButton:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.navButton svg {
+	width: 16px;
+	height: 16px;
+}
+
+/* Address bar container */
+.addressBarContainer {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	min-width: 0;
+}
+
+.addressBar {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px;
+	border-radius: 6px;
+	width: 100%;
+	min-width: 0;
+}
+
+.lockIcon {
+	flex-shrink: 0;
+	opacity: 0.6;
+}
+
+.url {
+	flex: 1;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 0.875em;
+	opacity: 0.8;
+}
+
+/* Page title (for classic style) */
+.pageTitle {
+	font-size: 0.875em;
+	font-weight: 500;
+	color: var(--color-foreground);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 200px;
+}
+
+/* Loading bar */
+.loadingBarContainer {
+	height: 3px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.05);
+	position: relative;
+	overflow: hidden;
+}
+
+.loadingBar {
+	height: 100%;
+	transition: width 0.3s ease-out;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/* Content area */
+.contentArea {
+	flex: 1;
+	overflow: auto;
+	background-color: var(--color-background);
+	position: relative;
+	min-height: 0;
+}
+
+.contentImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.contentText {
+	padding: var(--spacing-md, 16px);
+	color: var(--color-foreground);
+	font-family: var(--font-family);
+	font-size: var(--font-size-base, 16px);
+	line-height: var(--line-height, 1.6);
+}
+
+/* Chrome style variants */
+.chrome-modern .chromeHeader {
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+}
+
+.chrome-minimal .chromeHeader {
+	padding: 8px 12px;
+	min-height: 36px;
+}
+
+.chrome-minimal .windowControls {
+	gap: 6px;
+}
+
+.chrome-minimal .controlButton {
+	width: 10px;
+	height: 10px;
+}
+
+.chrome-classic .chromeHeader {
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.05));
+}

@@ -1,0 +1,20 @@
+/**
+ * LineChart Component Styles
+ */
+
+.lineChart {
+	position: relative;
+	display: inline-block;
+}
+
+.lineChart svg {
+	display: block;
+}
+
+.grid {
+	/* Grid lines styling */
+}
+
+.legend {
+	/* Legend styling */
+}
