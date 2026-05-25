@@ -28,6 +28,7 @@ export {
 } from "./useTheme";
 
 // Built-in themes
+export { lightTheme } from "./light";
 export { darkTheme } from "./dark";
 export { retroTheme } from "./retro";
 export { neonTheme } from "./neon";

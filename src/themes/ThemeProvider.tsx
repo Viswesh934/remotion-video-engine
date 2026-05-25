@@ -65,7 +65,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
 			if (theme) {
 				setCurrentTheme(theme);
 			} else {
-				console.warn(`Theme with id "${themeId}" not found. Available themes:`, themes.map(t => t.id));
+				console.warn(`Theme with ID "${themeId}" not found. Available themes: ${themes.map(t => t.id).join(", ")}`);
 			}
 		};
 		

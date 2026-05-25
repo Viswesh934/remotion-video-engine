@@ -50,6 +50,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({
 	revealAnimation = "none",
 	revealSpeed = 1,
 	fontSize,
+	codeColor,
 	width = "100%",
 	height,
 	maxHeight,

@@ -80,6 +80,8 @@ export interface ContainerProps extends BaseComponentProps {
 	background?: string;
 	/** Border radius */
 	borderRadius?: number;
+	/** Border style (CSS border shorthand) */
+	border?: string;
 	/** Position configuration */
 	position?: Position;
 	/** Center content horizontally */
@@ -215,6 +217,8 @@ export interface CodeBlockProps extends BaseComponentProps {
 	revealSpeed?: number;
 	/** Font size */
 	fontSize?: number;
+	/** Code color */
+	codeColor?: string;
 	/** Code block width */
 	width?: number | string;
 	/** Code block height */

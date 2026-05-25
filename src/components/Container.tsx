@@ -47,6 +47,7 @@ export const Container: React.FC<ContainerProps> = ({
 	height,
 	padding,
 	background,
+	border,
 	borderRadius,
 	position,
 	centerX = false,
@@ -65,6 +66,7 @@ export const Container: React.FC<ContainerProps> = ({
 			height: typeof height === "number" ? `${height}px` : height,
 			padding: typeof padding === "number" ? `${padding}px` : padding,
 			background: background || "transparent",
+			border: border,
 			borderRadius: borderRadius ? `${borderRadius}px` : undefined,
 		};
 		
